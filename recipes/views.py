@@ -3,6 +3,11 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home (request):
-    return render(request,'recipes/home.html', {
+    return render(request,'recipes/pages/home.html', {
+        'name': 'Pedro Lopes'
+    })
+
+def recipe (request, id):
+    return render(request,'recipes/pages/recipe-view.html', {
         'name': 'Pedro Lopes'
     })
